@@ -1,9 +1,25 @@
-version = 1
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")
+    }
 
-cloudstream {
-    description = "Watch Movies from AllMoviesHub — Bollywood, Hollywood & South"
-    authors = listOf("Nanmmm")
-    status = 1
-    tvTypes = listOf("Movie")
-    iconUrl = "https://allmovieshub.golf/wp-content/uploads/2021/06/cropped-favicon-1-192x192.png"
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+        classpath("com.github.recloudstream:gradle:-SNAPSHOT")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")
+    }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }
