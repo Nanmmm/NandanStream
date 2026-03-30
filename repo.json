@@ -1,0 +1,8 @@
+{
+  "name": "NandanStream",
+  "description": "Nandan's personal CloudStream repository — Movies",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Nanmmm/NandanStream/builds/plugins.json"
+  ]
+}
